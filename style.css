@@ -279,4 +279,92 @@
       font-size: 2rem;
     }
   }
+
+  
+  .featured-creators {
+    padding: 4rem 2rem;
+    background-color: #181818;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .section-header h2 {
+    font-size: 2.5rem;
+    color: #f8b400;
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-header p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 3rem;
+  }
+  
+  .creator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .creator-card {
+    background: linear-gradient(135deg, #202020, #2c2c2c);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(248, 180, 0, 0.1);
+    transition: all 0.4s ease;
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  
+  .creator-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease-out;
+  }
+  
+  .creator-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(248, 180, 0, 0.3);
+  }
+  
+  .creator-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #f8b400;
+  }
+  
+  .creator-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .creator-card p {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 1rem;
+  }
+  
+  .creator-card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .creator-card .tags span {
+    background: #292929;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: #f8b400;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
   

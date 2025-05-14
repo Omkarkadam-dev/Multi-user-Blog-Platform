@@ -36,3 +36,18 @@ const scrollObserver = new IntersectionObserver(
 );
 
 scrollElements.forEach(el => scrollObserver.observe(el));
+
+
+// Scroll-in animation for creator cards (reuse if already implemented)
+document.querySelectorAll(".animate-on-scroll").forEach(el => {
+    new IntersectionObserver(
+      ([entry], obs) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          obs.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.15 }
+    ).observe(el);
+  });
+  

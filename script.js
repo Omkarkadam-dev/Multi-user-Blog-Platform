@@ -18,3 +18,21 @@ const observer = new IntersectionObserver(
 );
 
 animatedCards.forEach(card => observer.observe(card));
+
+
+// Scroll-in animation for all ".animate-on-scroll" elements
+const scrollElements = document.querySelectorAll(".animate-on-scroll");
+
+const scrollObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        scrollObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+scrollElements.forEach(el => scrollObserver.observe(el));

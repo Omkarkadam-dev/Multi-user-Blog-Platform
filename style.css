@@ -196,4 +196,87 @@
       padding: 1.5rem 1rem;
     }
   }
+
+  
+  /* --- How It Works Section --- */
+.how-it-works {
+    background-color: #0f0f0f;
+    padding: 4rem 2rem;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .hiw-header h2 {
+    font-size: 2.5rem;
+    color: #f8b400;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hiw-header p {
+    font-size: 1.1rem;
+    color: #cccccc;
+    margin-bottom: 3rem;
+  }
+  
+  .hiw-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .step-card {
+    background: linear-gradient(135deg, #1e1e1e, #292929);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(248, 180, 0, 0.1);
+    transition: all 0.4s ease;
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  
+  .step-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(248, 180, 0, 0.3);
+  }
+  
+  .step-card i {
+    font-size: 2.5rem;
+    color: #f8b400;
+    margin-bottom: 1rem;
+  }
+  
+  .step-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .step-card p {
+    font-size: 1rem;
+    color: #dddddd;
+    line-height: 1.6;
+  }
+  
+  /* Scroll Animation */
+  .step-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease-out;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hiw-header h2 {
+      font-size: 2rem;
+    }
+  
+    .step-card {
+      padding: 1.5rem 1rem;
+    }
+  
+    .step-card i {
+      font-size: 2rem;
+    }
+  }
   
